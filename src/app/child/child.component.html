@@ -1,0 +1,23 @@
+<p>Добро пожаловать, {{name}}!</p>
+<p>Я знаю, что тебе {{age}} лет.</p>
+<p>Ты мужского пола? Ответ: {{isMale}}</p>
+
+<input type="text" [value]="name" placeholder="Имя">
+<input type="text" value="name" placeholder="Имя">
+<input type="number" [value]="age" [disabled]="isMale">
+
+<button (click)="change_name()">Поменять имя</button>
+
+<input type="text" [(ngModel)]="text">
+<div class="text">
+    {{text}}
+</div>
+
+<form>
+    <input name="firstname" type="text" [(ngModel)]="user.name">
+    <input name="surname" type="text" [(ngModel)]="user.surname">
+    <input name="age" type="number" [(ngModel)]="user.age">
+    <button (click)="viewResult()">Увидеть данные</button>
+</form>
+
+<app-home></app-home>

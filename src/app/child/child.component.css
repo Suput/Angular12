@@ -1,0 +1,12 @@
+p {
+    color: gray;
+}
+
+input {
+    display: block;
+}
+
+.text {
+    background-color: rgb(177, 177, 177);
+    color:rgb(28, 42, 122);
+}
