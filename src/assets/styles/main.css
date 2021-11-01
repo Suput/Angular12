@@ -10,6 +10,13 @@
     margin: 0;
 }
 
+.base1 {
+    margin-top: 20px;
+    padding: 10px;
+    color: rgb(146, 221, 49);
+    background-color: #c26a6a;
+}
+
 .el1 {
     grid-row: 1;
     grid-column: 1;
