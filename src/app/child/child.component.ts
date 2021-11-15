@@ -28,4 +28,13 @@ export class ChildComponent {
   viewResult() {
     alert(this.user.name + '\n' + this.user.surname + '\n' + this.user.age);
   }
+
+  username: string = "";
+  check() {
+    
+    // localStorage.getItem("userpassword");
+    if (this.username != localStorage.getItem("username")) { 
+      console.log("NOOOOOOOOOOOO");
+    }
+  }
 }

@@ -1,23 +1,61 @@
-<p>Добро пожаловать, {{name}}!</p>
-<p>Я знаю, что тебе {{age}} лет.</p>
-<p>Ты мужского пола? Ответ: {{isMale}}</p>
+<!-- <p>Добро пожаловать, {{ name }}!</p>
+<p>Я знаю, что тебе {{ age }} лет.</p>
+<p>Ты мужского пола? Ответ: {{ isMale }}</p>
 
-<input type="text" [value]="name" placeholder="Имя">
-<input type="text" value="name" placeholder="Имя">
-<input type="number" [value]="age" [disabled]="isMale">
+<input type="text" [value]="name" placeholder="Имя" />
+<input type="text" value="name" placeholder="Имя" />
+<input type="number" [value]="age" [disabled]="isMale" />
 
 <button (click)="change_name()">Поменять имя</button>
 
-<input type="text" [(ngModel)]="text">
+<input type="text" [(ngModel)]="text" />
 <div class="text">
-    {{text}}
+  {{ text }}
 </div>
 
 <form>
-    <input name="firstname" type="text" [(ngModel)]="user.name">
-    <input name="surname" type="text" [(ngModel)]="user.surname">
-    <input name="age" type="number" [(ngModel)]="user.age">
-    <button (click)="viewResult()">Увидеть данные</button>
-</form>
+  <input name="firstname" type="text" [(ngModel)]="user.name" />
+  <input name="surname" type="text" [(ngModel)]="user.surname" />
+  <input name="age" type="number" [(ngModel)]="user.age" />
+  <button (click)="viewResult()">Увидеть данные</button>
+</form> -->
 
-<app-home></app-home>
+<div class="container">
+  <form>
+    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+    <div class="form-floating">
+      <input
+        type="email"
+        class="form-control"
+        id="floatingInput"
+        placeholder="name@example.com"
+        [(ngModel)]="username"
+      />
+      <label for="floatingInput">Email address</label>
+    </div>
+    <div class="form-floating">
+      <input
+        type="password"
+        class="form-control"
+        id="floatingPassword"
+        placeholder="Password"
+      />
+      <label for="floatingPassword">Password</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label> <input type="checkbox" value="remember-me" /> Remember me </label>
+    </div>
+    <button
+      class="w-100 btn btn-lg btn-primary"
+      type="submit"
+      (click)="check()"
+    >
+      Sign in
+    </button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
+  </form>
+</div>
+
+<!-- <app-home></app-home> -->
